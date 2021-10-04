@@ -8,6 +8,8 @@ TagManager:
   - Ally1
   - Ground
   - Terrain
+  - Enemy
+  - Ally
   layers:
   - Default
   - TransparentFX
