@@ -32,3 +32,8 @@ Starting with the **Assets** folder:
   
   
   *Sprites* - I won't go too much into this folder, it's just the image sprite files for the target indicators. Once you open the project, everything should be right where it needs to be, but if there are issues just let know! Once I put the full game file here, you will also see the mini-map stuff too.
+  
+  
+Moving on to the **Project** folder:
+
+  I'm actually not sure if this will work, but as I mentioned ealier, the WASD mapping and setttings are set a certain way for now. Hope this folder allows you to just copy and paste, hopefully it just loads up automatically. You can look at the InputManager.asset file to see my Input settings. This should be useful once we get more into the full game.
