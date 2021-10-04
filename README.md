@@ -4,6 +4,7 @@ TO HELP UNDERSTAND THE GAME AND HOW THE SCRIPTS VARIABLES WORK.
 ***We will be updating this regularly.***
 
 Starting with the Assets folder:
+  
   Materials - these are just the basic materials used for the planes, buildings and ground.
   
   Prefabs - this folder splits into both the PaperPlanes & Target Indicators folder. The Target Indicators here are used for the World Empty Object to see enemy/ally planes.(These go on the UI Controller scripts for "Target Indicator Prefab".)
