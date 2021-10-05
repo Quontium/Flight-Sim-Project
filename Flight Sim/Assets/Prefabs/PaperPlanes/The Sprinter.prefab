@@ -7554,6 +7554,7 @@ GameObject:
   - component: {fileID: 2388776061595452938}
   - component: {fileID: -7126163819614805748}
   - component: {fileID: 8437480201278580295}
+  - component: {fileID: -7960730100289721827}
   m_Layer: 0
   m_Name: The Sprinter
   m_TagString: Player
@@ -7648,7 +7649,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   planeData: {fileID: 0}
+  rb: {fileID: 0}
   player: {fileID: 0}
+  Target: {fileID: 0}
+  manager: {fileID: 0}
+  isNPC: 1
+  health: 100
+  isDying: 0
   moveSpeed: 100
   rotSpeed: 150
   torque: 100
@@ -7669,7 +7676,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   planeData: {fileID: 0}
+  rb: {fileID: 0}
   player: {fileID: 0}
+  Target: {fileID: 0}
+  manager: {fileID: 0}
+  isNPC: 1
+  health: 100
+  isDying: 0
+--- !u!114 &-7960730100289721827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8169990523985721675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3827865843a00c64381cec87164c29a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  procentExtraDamage: 0
 --- !u!1 &8203800876919424532
 GameObject:
   m_ObjectHideFlags: 0

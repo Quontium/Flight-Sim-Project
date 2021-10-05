@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <LangVersion>latest</LangVersion>
+    <LangVersion>8.0</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -53,6 +53,9 @@
     <UnityVersion>2021.1.20f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
+  </ItemGroup>
+  <ItemGroup>
     <Compile Include="Assets\Scripts\UI Controller Scripts\TargetIndicator.cs" />
     <Compile Include="Assets\Scripts\AI Scripts\HWanderAI.cs" />
     <Compile Include="Assets\Scripts\AI Scripts\EWanderAI.cs" />
@@ -60,16 +63,20 @@
     <Compile Include="Assets\Scripts\Collision Avoid(Incomplete)\GroundScript.cs" />
     <Compile Include="Assets\Scripts\AI Scripts\NWanderAI.cs" />
     <Compile Include="Assets\Scripts\Collision Avoid(Incomplete)\GroundBoundary.cs" />
+    <Compile Include="Assets\Scripts\AI Scripts\Enemy.cs" />
     <Compile Include="Assets\Scripts\UI Controller Scripts\UIControllerSpecter.cs" />
     <Compile Include="Assets\Scripts\UI Controller Scripts\UIControllerCryo.cs" />
+    <Compile Include="Assets\Scripts\Bullet.cs" />
     <Compile Include="Assets\Scripts\PlayerFinal.cs" />
     <Compile Include="Assets\Scripts\UI Controller Scripts\Target Object Scripts\TargetObjectGardna.cs" />
+    <Compile Include="Assets\Scripts\PlayerShooting.cs" />
     <Compile Include="Assets\Scripts\AI Scripts\AllyFollowFinal.cs" />
     <Compile Include="Assets\Scripts\UI Controller Scripts\Target Object Scripts\TargetObjectSpecter.cs" />
     <Compile Include="Assets\Scripts\UI Controller Scripts\Target Object Scripts\TargetObjectThanatos.cs" />
     <Compile Include="Assets\Scripts\UI Controller Scripts\Target Object Scripts\TargetObjectEmber.cs" />
     <Compile Include="Assets\Scripts\UI Controller Scripts\UIControllerWraith.cs" />
     <Compile Include="Assets\Scripts\UI Controller Scripts\UIControllerGardna.cs" />
+    <Compile Include="Assets\Scripts\AI Scripts\Ally.cs" />
     <Compile Include="Assets\Scripts\UI Controller Scripts\UIControllerEmber.cs" />
     <Compile Include="Assets\Scripts\UI Controller Scripts\UIControllerTerra.cs" />
     <Compile Include="Assets\Scripts\UI Controller Scripts\Target Object Scripts\TargetObjectWraith.cs" />
@@ -78,11 +85,12 @@
     <Compile Include="Assets\Scripts\FollowCam.cs" />
     <Compile Include="Assets\Scripts\AI Scripts\AISpawner.cs" />
     <Compile Include="Assets\Scripts\AI Scripts\AIType.cs" />
+    <Compile Include="Assets\Scripts\PlacesToBeHit.cs" />
     <Compile Include="Assets\Scripts\UI Controller Scripts\Target Object Scripts\TargetObjectCryo.cs" />
-    <Compile Include="Assets\Scripts\UI Controller Scripts\UIControllerThanatos.cs" />
+    <Compile Include="Assets\Scripts\AI Scripts\AIManager.cs" />
+    <Compile Include="Assets\Scripts\KDTree.cs" />
     <Compile Include="Assets\Scripts\CreatePlane.cs" />
-    <Compile Include="Assets\Scripts\AI Scripts\Enemy.cs" />
-    <Compile Include="Assets\Scripts\AI Scripts\Ally.cs" />
+    <Compile Include="Assets\Scripts\UI Controller Scripts\UIControllerThanatos.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

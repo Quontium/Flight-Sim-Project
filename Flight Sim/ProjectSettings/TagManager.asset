@@ -10,6 +10,8 @@ TagManager:
   - Terrain
   - Enemy
   - Ally
+  - AIManager
+  - Bullet
   layers:
   - Default
   - TransparentFX

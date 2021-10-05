@@ -9,6 +9,10 @@ namespace FlightSim.AI
         {
             base.Fly();
         }
+        public override void resetTargetVoid()
+        {
+            base.resetTargetVoid();
+        }
     }
 }
 

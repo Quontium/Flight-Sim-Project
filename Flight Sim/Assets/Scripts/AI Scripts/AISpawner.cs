@@ -10,6 +10,7 @@ namespace FlightSim.AI
             Ally,
             Enemy
         }
+        private AIManager thisManager;
         public AITypeEnum aiType;
         [System.Serializable]
         public class AIData
@@ -27,6 +28,7 @@ namespace FlightSim.AI
         }
         void spawnAtStart()
         {
+            int count = 0;
             foreach (AIData ai in allPlanesToSpawn)
             {
                 for (int i = 0; i < ai.amount; i++)
@@ -37,6 +39,15 @@ namespace FlightSim.AI
                     Vector3 spawnPlace = new Vector3(x, y, z);
                     GameObject Instance = Instantiate(ai.planeData.prefab, spawnPlace, Quaternion.identity);
                     assignVarToPlanes(Instance, ai);
+                    count++;
+                    Instance.name = aiType.ToString() + " " + count.ToString();
+                    foreach (GameObject t in GameObject.FindGameObjectsWithTag("AIManager"))
+                    {
+                        AIManager manager = t.GetComponent<AIManager>();
+                        if(manager.typeOfPlanes != aiType)
+                            manager.helpUnit.Add(Instance.GetComponent<AIType>());
+                        
+                    }
                 }
             }
         }
@@ -45,8 +56,9 @@ namespace FlightSim.AI
             switch (aiType)
             {
                 case AITypeEnum.Ally: ai.GetComponent<Ally>().enabled = true; ai.tag = "Ally"; ai.GetComponent<Ally>().planeData = data.planeData;
+                    ai.GetComponent<Ally>().manager = GetComponent<AIManager>();
                     break;
-                case AITypeEnum.Enemy: ai.GetComponent<Enemy>().enabled = true; ai.tag = "Enemy"; ai.GetComponent<Enemy>().planeData = data.planeData;
+                case AITypeEnum.Enemy: ai.GetComponent<Enemy>().enabled = true; ai.tag = "Enemy"; ai.GetComponent<Enemy>().planeData = data.planeData; ai.GetComponent<Enemy>().manager = GetComponent<AIManager>();
                     break;
             }
         }

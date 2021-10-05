@@ -891,9 +891,10 @@ GameObject:
   m_Component:
   - component: {fileID: 450696878}
   - component: {fileID: 450696879}
+  - component: {fileID: 450696880}
   m_Layer: 0
   m_Name: AllyPlaneSpawner
-  m_TagString: Untagged
+  m_TagString: AIManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -931,6 +932,24 @@ MonoBehaviour:
   xRange: 20
   yRange: 20
   zRange: 20
+--- !u!114 &450696880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 450696877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e9b819b44a76ad4b86307707e10c4a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  typeOfPlanes: 0
+  K: 1
+  Radius: 0.1
+  DrawQueryNodes: 1
+  IntervalSize: {x: 0.2, y: 0.2, z: 0.2}
+  pointCloud: []
 --- !u!1001 &451623885
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -989,6 +1008,14 @@ PrefabInstance:
     - target: {fileID: 8169990523985721675, guid: ec9d71069263fab47b075e016358151f, type: 3}
       propertyPath: m_Name
       value: The Sprinter
+      objectReference: {fileID: 0}
+    - target: {fileID: 8437480201278580295, guid: ec9d71069263fab47b075e016358151f, type: 3}
+      propertyPath: isNPC
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8437480201278580295, guid: ec9d71069263fab47b075e016358151f, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec9d71069263fab47b075e016358151f, type: 3}
@@ -1538,9 +1565,10 @@ GameObject:
   m_Component:
   - component: {fileID: 677697574}
   - component: {fileID: 677697575}
+  - component: {fileID: 677697576}
   m_Layer: 0
   m_Name: EnemyPlaneSpawner
-  m_TagString: Untagged
+  m_TagString: AIManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1578,6 +1606,24 @@ MonoBehaviour:
   xRange: 20
   yRange: 20
   zRange: 20
+--- !u!114 &677697576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 677697573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e9b819b44a76ad4b86307707e10c4a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  typeOfPlanes: 1
+  K: 1
+  Radius: 0.1
+  DrawQueryNodes: 1
+  IntervalSize: {x: 0.2, y: 0.2, z: 0.2}
+  pointCloud: []
 --- !u!4 &702676714 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3687751095940803979, guid: ec9d71069263fab47b075e016358151f, type: 3}
@@ -1725,6 +1771,66 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8169990523985721675, guid: ec9d71069263fab47b075e016358151f, type: 3}
   m_PrefabInstance: {fileID: 451623885}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &756760075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 756760074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3827865843a00c64381cec87164c29a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  procentExtraDamage: 0
+--- !u!114 &756760076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 756760074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8e65a498db14484dbe07f0ff6dd8cd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 1664669981219944352, guid: 3f6ecd7722f2955499d309dfece1f0a0, type: 3}
+  shootingPower: 1000
+  maxAmmoCapacity: 20
+  reloadTime: 2
+  Turret: {fileID: 817396984}
+--- !u!1 &817396983
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 817396984}
+  m_Layer: 0
+  m_Name: Turret
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &817396984
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 817396983}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.877, y: 0, z: 3.94}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2007239172}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &837480032
 GameObject:
   m_ObjectHideFlags: 0
